@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Hola"); 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(Time.deltaTime, 0, 0);
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(-Time.deltaTime, 0, 0);
+        }
     }
 }
